@@ -119,7 +119,7 @@ public class GoogleAccount extends GoogleService {
             // onSuccess(request, resp, credential);
         } catch (IOException e) {
             LOG.error("Exception while trying to store user Credential", e);
-            throw new ServletException("Error while trying to conenct Google Account");
+            throw new ServletException("Error while trying to connect Google Account");
         }
 
         return "redirect:/";
@@ -139,7 +139,7 @@ public class GoogleAccount extends GoogleService {
 
         if (null == userId) {
             LOG.error("userId in Session is NULL in Callback");
-            throw new ServletException("Error when trying to add Google acocunt : userId is NULL is User Session");
+            throw new ServletException("Error when trying to add Google account : userId is NULL is User Session");
         }
         return userId;
     }

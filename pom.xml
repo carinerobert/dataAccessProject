@@ -22,6 +22,10 @@
         <log4jVersion>2.9.1</log4jVersion>
         <log4jVersion>2.9.1</log4jVersion>
         <buildToolVersion>0.0.4</buildToolVersion>
+        
+        <sonar.projectKey>carinerobert_dataAccessProject</sonar.projectKey>
+        <sonar.host.url>https://sonarcloud.io/</sonar.host.url>
+        <sonar.organization>carinerobert</sonar.organization>
 
         <mainDir>${project.basedir}</mainDir>
     </properties>
@@ -98,6 +102,15 @@
                 </dependencies>
             </plugin>
         </plugins>
+                <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.sonarsource.scanner.maven</groupId>
+                    <artifactId>sonar-maven-plugin</artifactId>
+                    <version>3.6.1.1688</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
     <reporting>
